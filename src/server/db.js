@@ -7,11 +7,11 @@ var _ = require('lodash');
 
 //创建连接数据库的配置文件
 var config = {
-    userName: 'WebApp',
-    password: 'p@ssw0rd',
-    server: '61.172.251.227',
+    userName: 'username',
+    password: 'password',
+    server: '192.168.0.1',
     options: {
-        database: 'ZM_ERP_JT',
+        database: 'DB_Name',
         // *****************************************************************************
         // ****** Warning:只有在设置rowCollectionOnRequestCompletion : true之后
         // 查询的结果才会返回到回调函数中
