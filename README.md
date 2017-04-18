@@ -1,6 +1,6 @@
 # vue-cli-test
 
-> do some test about vue-cli
+> 基于vue-cli生成 使用axios 配置前端请求  express配置服务器  tedious连接sqlserver数据库 实现前后端的数据的交互。
 
 ## Build Setup
 
@@ -23,5 +23,4 @@ npm run unit
 # run all tests
 npm test
 ```
-
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+如果你在使用的过程中出现了任何的问题：可以联系 dendise7en@gmail.com 或者提交到 ISSUES 中
