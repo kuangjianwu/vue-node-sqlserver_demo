@@ -1,4 +1,5 @@
-# vue-cli-test
+# Vue-sqlserver-demo
+==
 
 > 基于vue-cli生成 
   axios 配置前端请求  
@@ -8,7 +9,7 @@
   
   实现前后端的数据的交互Demo
 
-##项目说明
+## 项目说明
 package.json 中比较重要的几个包相关说明
 
 * "axios": "^0.16.1",  前端路由库。vue官方推荐
