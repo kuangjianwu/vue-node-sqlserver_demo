@@ -1,11 +1,13 @@
-# Vue-sqlserver-demo
+Vue-sqlserver-demo
 ==
 
-> 基于vue-cli生成 
-  axios 配置前端请求  
-  express配置服务器  
-  tedious连接sqlserver数据库 
-  wepack 负责打包
+## 涉及到的技术
+> 
+ * vue-cli 生成 
+ * axios   配置前端请求  
+ * express 配置服务器  
+ * tedious 连接sqlserver数据库 
+ * wepack  负责打包
   
   实现前后端的数据的交互Demo
 
