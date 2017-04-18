@@ -3,7 +3,7 @@ Vue-sqlserver-demo
 
 
 
-## 涉及到的技术
+涉及到的技术
 
 ---
 
@@ -18,7 +18,7 @@ Vue-sqlserver-demo
 
 
 ---
-## 外部库说明
+外部库说明
 
 ###### 以下提及的库 均可在package.json中找到(如果在看相关代码时 不太明白 可以参考官方文档)
 
@@ -32,14 +32,14 @@ Vue-sqlserver-demo
 
 ---
 
-## 部分关键文件说明
+部分关键文件说明
 
   <待更新>
 
 ---
 
 
-## Build Setup
+Build Setup
 
 ---
 
