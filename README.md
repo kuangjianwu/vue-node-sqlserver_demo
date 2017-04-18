@@ -52,5 +52,7 @@ npm run dev
 
 ```
 
-If you got some questions about this demo .You can get contact with me by this email dendise7en@gmail.com.
+---
+
+If you got some questions about this demo .You can get contact with me by this email dendise7en@gmail.com.<br />
 如果你在使用的过程中出现了任何的问题：可以联系 dendise7en@gmail.com 或者提交到 Issues 中
