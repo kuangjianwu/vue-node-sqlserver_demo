@@ -1,13 +1,10 @@
 Vue-sqlserver-demo
-=====
+===
 
 
 
 涉及到的技术
-
 ---
-
- 
  * vue-cli 生成主体框架
  * axios   配置前端请求  
  * express 配置服务器  
@@ -17,9 +14,9 @@ Vue-sqlserver-demo
   实现前后端的数据的交互Demo
 
 
----
-外部库说明
 
+外部库说明
+---
 ###### 以下提及的库 均可在package.json中找到(如果在看相关代码时 不太明白 可以参考官方文档)
 
 ---
@@ -30,17 +27,14 @@ Vue-sqlserver-demo
 * "express": "^4.14.1",  [expressjs 官方文档](http://expressjs.com/)<br />
 
 
----
-
 部分关键文件说明
-
+---
   <待更新>
 
----
+
 
 
 Build Setup
-
 ---
 
 ``` bash
