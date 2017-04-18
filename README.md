@@ -1,7 +1,7 @@
 Vue-sqlserver-demo
 =================================== 
 
----
+
 
 ## 涉及到的技术
 
@@ -18,8 +18,6 @@ Vue-sqlserver-demo
 
 
 
----
-
 ## 外部库说明
 
 #### 以下提及的库 均可在package.json中找到
@@ -33,15 +31,16 @@ Vue-sqlserver-demo
 * "express": "^4.14.1",  [expressjs 官方文档](http://expressjs.com/)<br />
 
 
----
-
 ## 部分关键文件说明
 
+<待更新>
+
 ---
+
 
 ## Build Setup
 
-
+---
 
 ``` bash
 # install dependencies
