@@ -90,7 +90,7 @@ dev: {
 >>* express的基础知识，Express 的 middleware，Express.Router() 
 >>* Vue组件的相关知识
 
-####1.Src目录
+###1.Src目录
 ```bash
 ├── App.vue     唯一Vue组件，用来测试
 ├── assets      资源目录，并未使用
@@ -102,7 +102,7 @@ dev: {
 
 ```
 
-####2.使用tedious配置连接数据库
+###2.使用tedious配置连接数据库
 * 先看目录
 
 ```bash
@@ -135,7 +135,7 @@ dev: {
 ```
 
 
-####3.返回结果的处理，参数格式的设计和传入过程
+###3.返回结果的处理，参数格式的设计和传入过程
 
 * 返回结果的处理 ：./src/server/dbapi.js 方法 dataNormalizeCallBack
 
