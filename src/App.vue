@@ -32,16 +32,16 @@ export default {
         //get请求的参数内容
         /********************************************/
         //query 测试
-        params: {
-          action:'queryDatabase',
-            // updateDatabase
-            // insertDatabase
-            // deteleDatabase
-          fieldList: '用户名,用户姓名,密码',
-          tableName: 'APP_内部_登录信息',
-          params : '',
-          whereStr : "用户名 = '" + this.account + "'"
-        }
+        // params: {
+        //   action:'queryDatabase',
+        //     // updateDatabase
+        //     // insertDatabase
+        //     // deteleDatabase
+        //   fieldList: '用户名,用户姓名,密码',
+        //   tableName: 'APP_内部_登录信息',
+        //   params : '',
+        //   whereStr : "用户名 = '" + this.account + "'"
+        // }
         /********************************************/
 
         /********************************************/
@@ -78,6 +78,18 @@ export default {
         //   whereStr: "用户名 = '" + this.account + "'"
         // }
         /********************************************/
+        
+        /********************************************/
+        //procedure 测试通过
+        // params: {
+        //   action: 'procedureDatabase',
+        //   fieldList: '',
+        //   tableName: 'ADD_TEST',
+        //   params: "'用户名1','用户姓名1','密码1'",
+        //   whereStr: ""
+        // }
+        /********************************************/
+
       }).then((response) => {
         //因为axios内部的回调方法 并不与父方法共享变量
         //所以此处正常写法是获取不到vue组件中 定义的password变量

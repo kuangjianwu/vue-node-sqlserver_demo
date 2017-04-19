@@ -41,19 +41,17 @@ router.get('/api/query', (req, res) => {
     let action = req.query['action'];
     // DB[action] : DB.queryDatabase, DB.updateDatabase
     // DB.insertDatabase,DB.deteleDatabase
-    DB[action](actionObject, function (rows) {
-
-        if (action === "queryDatabase") {
-            //当前的列名
+    DB[action](actionObject, function (rows, rowCount) {
+        if (rows[0]&&rows[0][0]) {
             var name = rows[0][0].metadata.colName;
-            // 存储 格式化完成 结果的resultArray
+            //存储 格式化完成 结果的resultArray
             let resultArray = new Array;
-            // console.log(resultArray); 将resultArray写入到response中
+            //将resultArray写入到response中
             dataNormalizeCallBack(resultArray, rows, function () {
                 res.send(resultArray);
             });
-        }else{
-            res.send('success');
+        } else {
+            res.send({'rowCount':rowCount});
         }
     });
 });
