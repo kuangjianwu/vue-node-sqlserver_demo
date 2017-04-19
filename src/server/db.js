@@ -5,20 +5,21 @@ var Request = require('tedious').Request;
 //lodash 是用来对字符串和数据以及常用引用类型的值 进行操作的库
 var _ = require('lodash');
 
-    //创建连接数据库的配置文件
-    var config = {
-        userName: 'WebApp',
-        password: 'p@ssw0rd',
-        server: '61.172.251.227',
-        options: {
-            database: 'ZM_ERP_JT',
-            // *****************************************************************************
-            // ****** Warning:只有在设置rowCollectionOnRequestCompletion : true之后
-            // 查询的结果才会返回到回调函数中
-            // *****************************************************************************
-            // ******
-            rowCollectionOnRequestCompletion: true
-        }
+
+//创建连接数据库的配置文件
+var config = {
+    userName: 'username',
+    password: 'password',
+    server: '192.168.0.1',
+    options: {
+        database: 'DB_Name',
+        // *****************************************************************************
+        // ****** Warning:只有在设置rowCollectionOnRequestCompletion : true之后
+        // 查询的结果才会返回到回调函数中
+        // *****************************************************************************
+        // ******
+        rowCollectionOnRequestCompletion: true
+
     }
 // 根据配置文件创建一个数据库连接
 var connection = new Connection(config);
