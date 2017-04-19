@@ -5,21 +5,21 @@ var Request = require('tedious').Request;
 //lodash 是用来对字符串和数据以及常用引用类型的值 进行操作的库
 var _ = require('lodash');
 
-//创建连接数据库的配置文件
-var config = {
-    userName: 'WebApp',
-    password: 'p@ssw0rd',
-    server: '61.172.251.227',
-    options: {
-        database: 'ZM_ERP_JT',
-        // *****************************************************************************
-        // ****** Warning:只有在设置rowCollectionOnRequestCompletion : true之后
-        // 查询的结果才会返回到回调函数中
-        // *****************************************************************************
-        // ******
-        rowCollectionOnRequestCompletion: true
+    //创建连接数据库的配置文件
+    var config = {
+        userName: 'WebApp',
+        password: 'p@ssw0rd',
+        server: '61.172.251.227',
+        options: {
+            database: 'ZM_ERP_JT',
+            // *****************************************************************************
+            // ****** Warning:只有在设置rowCollectionOnRequestCompletion : true之后
+            // 查询的结果才会返回到回调函数中
+            // *****************************************************************************
+            // ******
+            rowCollectionOnRequestCompletion: true
+        }
     }
-}
 // 根据配置文件创建一个数据库连接
 var connection = new Connection(config);
 // 当连接创建时，可以调用对应的方法 以后这里可以调用 loading图标的start
@@ -129,7 +129,7 @@ let deteleDatabase = (deteleObject, callbackFunc) => {
 };
 
 // 定义调用存储过程的方法
-let ProcedureDatabase = (procedureObject) => {
+let ProcedureDatabase = (procedureObject,callbackFunc) => {
     // 定义默认值
     let defaultObject = {
         //存储过程的名字
@@ -142,7 +142,7 @@ let ProcedureDatabase = (procedureObject) => {
     // 开始修改前提示
     console.log('start exec  the Procedure...' + defaultObject.tableName);
     // 组装修改的SQL字符串
-    let procedureStr = "  EXEC " + defaultObject.tableName + " ( " + defaultObject.params +" )";
+    let procedureStr = "  EXEC " + defaultObject.tableName + " " + defaultObject.params +"";
 
     console.log(procedureStr);
     commonRequest(procedureStr, callbackFunc, 'PROCEDURE');
@@ -152,24 +152,14 @@ let ProcedureDatabase = (procedureObject) => {
 let commonRequest = function (excuteStr, callbackFunc, action) {
     request = new Request(excuteStr, function (err, rowCount, rows) {
         console.log(rowCount + ' row(s) ' + action);
-        if (action === 'queryDatabase ' && rowCount == 0) {
-            return;
-        } else {
-            callbackFunc(rows);
-        }
+        callbackFunc(rows,rowCount);
     });
     connection.execSql(request);
 };
 
-let DB = {
-    'queryDatabase': queryDatabase,
-    'updateDatabase': updateDatabase,
-    'insertDatabase': insertDatabase,
-    'deteleDatabase': deteleDatabase,
-    'procedureDatabase':ProcedureDatabase
-}
 
-module.exports.queryDatabase = queryDatabase;
+module.exports.queryDatabase =queryDatabase;
 module.exports.updateDatabase = updateDatabase;
 module.exports.insertDatabase = insertDatabase;
 module.exports.deteleDatabase = deteleDatabase;
+module.exports.procedureDatabase = ProcedureDatabase;
